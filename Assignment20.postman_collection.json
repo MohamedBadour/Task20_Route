@@ -1,0 +1,31 @@
+﻿{
+  "info": {
+    "name": "Assignment20_NestJS_ECommerce",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Brands (Cached)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/brands"
+      }
+    },
+    {
+      "name": "Products (Cached & Filtered)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/products?minPrice=500"
+      }
+    },
+    {
+      "name": "Validate Coupon",
+      "request": {
+        "method": "POST",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {"mode": "raw", "raw": "{\"code\": \"ROUTE20\"}"},
+        "url": "http://localhost:3000/coupons/validate"
+      }
+    }
+  ]
+}
